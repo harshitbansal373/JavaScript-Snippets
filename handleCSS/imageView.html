@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <style>
+        #demo{
+            background-image: url("cartoon.jpg");
+            background-size: 100% 100%;
+            width: 300px;
+            height: 300px;
+            border: 5px black solid;
+            margin-top: 3%;
+        }
+    </style>
+    <script>
+        function img1(){
+            var x = document.getElementById("demo");
+            x.style.backgroundImage= "url(cartoon.jpg)";
+        }
+        function img2(){
+            var x = document.getElementById("demo");
+            x.style.backgroundImage= "url(cat.jpg)";
+        }
+        function img3(){
+            var x = document.getElementById("demo");
+            x.style.backgroundImage= "url(cat2.jpg)";
+        }
+        function img4(){
+            var x = document.getElementById("demo");
+            x.style.backgroundImage= "url(machanic.jpg)";
+        }
+    </script>
+</head>
+<body>
+    <div class="text-center">
+        <div id="demo" class="mx-auto d-block" ></div>
+        
+        <div class="mt-3">
+            <button type="button" class="btn btn-secondary" onclick="img1()">1</button>
+            <button type="button" class="btn btn-secondary" onclick="img2()">2</button>
+            <button type="button" class="btn btn-secondary" onclick="img3()">3</button>
+            <button type="button" class="btn btn-secondary" onclick="img4()">4</button>
+        </div>
+    </div>
+</body>
+</html>
