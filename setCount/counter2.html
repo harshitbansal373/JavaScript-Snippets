@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+    <style>
+        #result{
+            color: red;
+            font-size: 75px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="text-center" style="margin-top: 15%;">
+        <p id="result"></p>
+        <button id="btn" class="btn btn-dark btn-lg"" onclick="start()">start counter</button>
+    </div>
+
+    <script>
+        var wap;
+        function start(){
+            document.getElementById("btn").style.display="none";
+            var result=document.getElementById("result");
+            var x=5;
+            function demo(){
+                result.innerHTML=x--;
+                if(x==-1){
+                    clearInterval(wap);
+                    result.innerHTML="Surprise!";
+                }
+            }
+            wap = setInterval(demo,1000);
+        }
+    </script>
+</body>
+</html>
