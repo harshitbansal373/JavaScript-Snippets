@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+    <style>
+        body{
+            background-color:#e8eaed;
+        }
+        header{
+            background-color:#b5b5b5;
+            width: 100%;
+            height: 140px;
+            position: fixed;
+            top: 0%;
+            left: 0%;
+        }
+        button{
+            width: 5%;
+            height: 26%;
+            background-color:floralwhite;
+            color: black;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            margin: 1.5%;
+        }
+        #page{
+            width: 70%;
+            height: 1200px;
+            margin: 150px auto;
+            background-color: white;
+            font-size: 20px;
+            padding: 3% 5%;
+            box-sizing: border-box;
+        }
+        #page:focus{
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <header class="text-center">
+        <h1 style="color:#233361">My EDITOR</h1>
+        <button id="bold"><b>B</b></button>
+        <button id="italic"><i>I</i></button>
+        <button id="underline"><u>U</u></button>
+        <button id="sup">A <sup>2</sup></button>
+        <button id="sub">A <sub>2</sub></button>
+        <button id="left" style="text-align:left">LEFT</button>
+        <button id="center" style="text-align:center">CENTER</button>
+        <button id="right" style="text-align:right">RIGHT</button>
+        <button id="delete">DELETE</button>
+        <button id="undo">UNDO</button>
+        <button id="redo">REDO</button>
+    </header>
+    <div id="page" contenteditable="true" spellcheck="false"></div>
+
+    <script>
+        var bold = document.getElementById("bold");
+        bold.onclick = function(){
+            document.execCommand("bold");
+        };
+        var italic = document.getElementById("italic");
+        italic.onclick = function(){
+            document.execCommand("italic");
+        };
+        var underline = document.getElementById("underline");
+        underline.onclick = function(){
+            document.execCommand("underline");
+        };
+        var sup = document.getElementById("sup");
+        sup.onclick = function(){
+            document.execCommand("superscript");
+        };
+        var sub = document.getElementById("sub");
+        sub.onclick = function(){
+            document.execCommand("subscript");
+        };
+        var left = document.getElementById("left");
+        left.onclick = function(){
+            document.execCommand("justifyLeft");
+        };
+        var center = document.getElementById("center");
+        center.onclick = function(){
+            document.execCommand("justifyCenter");
+        };
+        var right = document.getElementById("right");
+        right.onclick = function(){
+            document.execCommand("justifyRight");
+        };
+        var del = document.getElementById("delete");
+        del.onclick = function(){
+            document.execCommand("delete");
+        };
+        var undo = document.getElementById("undo");
+        undo.onclick = function(){
+            document.execCommand("undo");
+        };
+        var redo = document.getElementById("redo");
+        redo.onclick = function(){
+            document.execCommand("redo");
+        };
+    </script>
+</body>
+</html>
