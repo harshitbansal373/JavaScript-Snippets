@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <style>
+    img{
+        border: 5px black solid;
+    }
+    div{
+        margin-top: 2%;
+    }
+    </style>
+</head>
+<body>
+    <div class="text-center">
+        <img id="pic" src="cat2.jpg" alt="img">
+        <div>
+            brightness<input id="brightness" type="range" min="0" max="100" oninput="brightness()">
+            contrast<input id="contrast" type="range" min="0" max="100" oninput="contrast()">    <br><br>
+            saturation<input id="saturation" type="range" min="1" max="10" oninput="saturation()">
+            sepia<input id="sepia" type="range" min="1" max="100" oninput="sepia()">
+        </div>
+    </div>
+
+    <script>
+    function brightness(){
+        var a=document.getElementById("brightness").value;
+        document.getElementById("pic").style.filter="brightness("+a+"%)";
+    }
+    function contrast(){
+        var a=document.getElementById("contrast").value;
+        document.getElementById("pic").style.filter="contrast("+a+"%)";
+    }
+    function saturation(){
+        var a=document.getElementById("saturation").value;
+        var b=document.getElementById("pic").style.filter="saturate("+a+")";
+    }
+    function sepia(){
+        var a=document.getElementById("sepia").value;
+        document.getElementById("pic").style.filter="sepia("+a+"%)";
+    }
+    </script>
+
+</body>
+</html>
