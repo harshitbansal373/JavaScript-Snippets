@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!-- read username after check button -->
+    <form action="">
+        username
+        <input id="user1" type="text">
+        <button onclick="return demo1()">check</button>
+    </form>
+    <p id="result1"></p>
+
+    <script>
+    function demo1(){
+        var a = document.getElementById("user1").value;
+        var b = a=="harshit"?"user found":"user not found"; 
+        document.getElementById("result1").innerHTML = b;
+        return false;
+    }
+    </script>
+
+    <!-- read user live -->
+    <br><br><br>
+    <form action="">
+        username
+        <input id="user2" type="text" oninput="demo2()">
+    </form>
+    <p id="result2"></p>
+
+    <script>
+    function demo2(){
+        var a = document.getElementById("user2").value;
+        var b = a=="harshit"?"user found":"user not found"; 
+        document.getElementById("result2").innerHTML = b;
+    }
+    </script>
+        
+</body>
+</html>
