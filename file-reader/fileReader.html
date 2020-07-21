@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="file" accept="video/*" id="vid" onchange="demo(event)">
+   <video width="720" height="480" controls  id="result"></video>
+   
+   <script>
+// JavaScript Document
+    var demo= function(x)
+    {
+        var input = x.target;
+        var reader = new FileReader();
+        reader.onload = function(){
+            var filename = reader.result;
+            var result = document.getElementById("result");
+            result.src = filename;
+        };
+        reader.readAsDataURL(input.files[0]);
+    }
+    </script>
+</body>
+</html>

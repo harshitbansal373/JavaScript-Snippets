@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="file" accept="video/*" id="vid" onchange="demo()">
+   <video width="720" height="480" controls  id="res"></video>
+   <script>
+// JavaScript Document
+    var demo= function()
+    {
+         var x = document.getElementById("vid");
+         var url = URL.createObjectURL(x.files[0]);
+         document.getElementById("res").src=url;
+    }
+    </script>
+</body>
+</html>
